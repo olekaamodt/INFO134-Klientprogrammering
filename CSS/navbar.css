@@ -1,0 +1,71 @@
+/* Add a black background color to the top navigation */
+.navbar {
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  /* styler linkene og gjÃ¸r at de ligger til venstre i navbaren */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* skifter fargen til linkene nÃ¥r man har muspekeren over linkene */
+  .navbar a:hover {
+    background-color: lightgrey;
+    color: black;
+  }
+  
+  .active {
+    background-color: lightgrey;
+    color: white;
+  }
+  
+  /* gjemmer linken som Ã¥pner dropdown menyen nÃ¥r skjermen er liten */
+  .navbar .icon {
+    display: none;
+  }
+  
+  #aktiv {
+    display: none;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  /* NÃ¥r skjermen er mindre enn 800px vill alle linkene bli gjemt og ikonet som Ã¥pner dropdown menyen vil vises. */
+  @media screen and (max-width: 800px) {
+    .navbar .link {
+      display: none;
+    }
+    .navbar .enabled {
+      display: none;
+    }
+  
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+    #aktiv {
+      display: inline;
+    }
+  
+  /* Klassen "responsive vil bli lagt till "navbar med javascript, som vil gjÃ¸re at navbaren ser bra ut pÃ¥ liten skjerm" */
+    .navbar.responsive {
+      position: relative;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
